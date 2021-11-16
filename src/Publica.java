@@ -23,10 +23,16 @@ public class Publica extends Universidade {
 	public void setCidade(String c) {
 		cidade = c;
 	}
+
+	@Override
+    public void getClassName() {
+        System.out.println("\tTipo de Universidade: " + (this.getClass().getSimpleName()));
+    }
 	
+	@Override
 	public void imprimeInfo(){
 		super.imprimeInfo();
-		System.out.println("Estado: "+estado);
-		System.out.println("Cidade: "+cidade);
+		System.out.println("\tEstado: "+estado);
+		System.out.println("\tCidade: "+cidade);
 	}
 }
