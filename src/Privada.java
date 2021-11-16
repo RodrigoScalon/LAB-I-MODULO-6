@@ -3,7 +3,7 @@ public class Privada extends Universidade {
 	private double valorMensalidade;
 
 	public Privada(String n, int qA, int qP, double vM) {
-		super(n, qA, qP);
+		super(n, n, n, qA, qP);
 		this.valorMensalidade = vM;
 	}
 
@@ -17,7 +17,7 @@ public class Privada extends Universidade {
 	
 	public void imprimeInfo(){
 		super.imprimeInfo();
-		System.out.println("Valor da mensalidade: R$" +valorMensalidade);
+		System.out.println("Valor da mensalidade: R$"+valorMensalidade);
 	}
-	
+
 }

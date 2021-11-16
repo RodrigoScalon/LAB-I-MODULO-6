@@ -1,11 +1,11 @@
+import java.util.List;
 
 public class Universidade {
 
 	private String nome;
 	private int quantAlunos, quantProfessores;
 	
-	public Universidade(String n, int qA, int qP) {
-		
+	public Universidade(String n, String e, String c, int qA, int qP) {
 		nome = n;
 		quantAlunos = qA;
 		quantProfessores = qP;
@@ -28,10 +28,24 @@ public class Universidade {
 	public void setQuantProfessores(int qP) {
 		quantProfessores = qP;
 	}
+
+	public void imprimeUniversidades(){
+		imprimeInfo();
+	}
+
+	public void maisCara (){
+		System.out.println("Universidade privada mais cara: ");
+	}
 	
 	public void imprimeInfo(){
 		System.out.println("Nome: "+nome);
 		System.out.println("Quantidade de alunos: "+quantAlunos);
 		System.out.println("Quantidade de professores: "+quantProfessores);
 	}
+	
+	public void getClassName(){
+
+	}
+
+
 }

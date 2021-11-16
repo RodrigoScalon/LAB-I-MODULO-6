@@ -3,7 +3,7 @@ public class Publica extends Universidade {
 	private String estado, cidade;
 
 	public Publica(String n, int qA, int qP, String e, String c) {
-		super(n, qA, qP);
+		super(n, c, c, qA, qP);
 		estado = e;
 		cidade = c;
 	}
@@ -29,5 +29,4 @@ public class Publica extends Universidade {
 		System.out.println("Estado: "+estado);
 		System.out.println("Cidade: "+cidade);
 	}
-	
 }
