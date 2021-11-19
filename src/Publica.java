@@ -1,3 +1,4 @@
+import java.util.List;
 
 public class Publica extends Universidade {
 	private String estado, cidade;
@@ -30,9 +31,18 @@ public class Publica extends Universidade {
     }
 	
 	@Override
-	public void imprimeInfo(){
-		super.imprimeInfo();
+	public void imprimeUniversidades(){
+		super.imprimeUniversidades();
 		System.out.println("\tEstado: "+estado);
 		System.out.println("\tCidade: "+cidade);
 	}
+
+	@Override
+	public void universidadeDoSul(List<Universidade> university){
+		super.universidadeDoSul(university);
+		System.out.println("Universidade do sul: ");
+		
+	}
+
+
 }

@@ -67,14 +67,15 @@ public class Principal {
             case "3": {
                 System.out.println();
                 for (Universidade u : university) {
-                    System.out.println("UNIVERSIDADES : ");
+                    System.out.println("UNIVERSIDADE : ");
                     u.getClassName();
-                    u.imprimeInfo();
+                    u.imprimeUniversidades();
                 }
                 for (Universidade u : universityPriv) {
-                    System.out.println("UNIVERSIDADES : ");
+                    System.out.println("UNIVERSIDADE : ");
                     u.getClassName();
-                    u.imprimeInfo();
+                    u.imprimeUniversidades();
+                   
                 }
                 break;
             }
@@ -91,20 +92,10 @@ public class Principal {
             case "5": {
                 System.out.println();
                 System.out.println("== MEC - UNIVERSIDADES PÚBLICAS DO SUL ==");
-                String e1 = new String("RS");
-                String e2 = new String("SC");
-                String e3 = new String("PR");
-
-                for (Universidade u : university) {
-
-                    if (e1.equals(u.getEstado())) {
-                        System.out.println("Nome da Universidade: " + u.getNome() + ", " + " Estado: " + u.getEstado());
-                    } else if (e2.equals(u.getEstado())) {
-                        System.out.println("Nome da Universidade: " + u.getNome() + ", " + " Estado: " + u.getEstado());
-                    } else if (e3.equals(u.getEstado())) {
-                        System.out.println("Nome da Universidade: " + u.getNome() + ", " + " Estado: " + u.getEstado());
-                    }
-                }
+               
+                Universidade.universidadeDoSul();
+                
+                
                 break;
             }
 
