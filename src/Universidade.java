@@ -40,6 +40,16 @@ public class Universidade {
 	public void getClassName(){
 	}
 
+	public Double getValorMensalidade() {
+		return getValorMensalidade();
+	}
+
+    public String getEstado() {
+        return getNome();
+    }
+
+   
+
 
        
 

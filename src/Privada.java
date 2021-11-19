@@ -1,14 +1,17 @@
 
 public class Privada extends Universidade {
-	private double valorMensalidade;
+	private Double valorMensalidade;
 
 
+	public Privada() {
+
+	}
 	public Privada(String n, int qA, int qP, double vM) {
 		super(n, n, n, qA, qP);
 		this.valorMensalidade = vM;
 	}
 
-	public double getValorMensalidade() {
+	public Double getValorMensalidade() {
 		return valorMensalidade;
 	}
 
@@ -16,13 +19,6 @@ public class Privada extends Universidade {
 		valorMensalidade = vM;
 	}
 
-
-	public void maisCara () {
-
-		if (valorMensalidade > 100) {
-    System.out.println("\tUniversidade privada mais cara é: " + (this.getNome()) + " - " + (this.getValorMensalidade()));
-		}
-	}
 
 	@Override
 	public void imprimeInfo(){
