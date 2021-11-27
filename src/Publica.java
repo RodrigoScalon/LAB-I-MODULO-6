@@ -1,5 +1,3 @@
-import java.util.List;
-
 public class Publica extends Universidade {
 	private String estado, cidade;
 
@@ -26,23 +24,15 @@ public class Publica extends Universidade {
 	}
 
 	@Override
-    public void getClassName() {
-        System.out.println("\tTipo de Universidade: " + (this.getClass().getSimpleName()));
-    }
-	
+	public void getClassName() {
+		System.out.println("\tTipo de Universidade: " + (this.getClass().getSimpleName()));
+	}
+
 	@Override
-	public void imprimeUniversidades(){
+	public void imprimeUniversidades() {
 		super.imprimeUniversidades();
-		System.out.println("\tEstado: "+estado);
-		System.out.println("\tCidade: "+cidade);
+		System.out.println("\tEstado: " + estado);
+		System.out.println("\tCidade: " + cidade);
 	}
-
-	@Override
-	public void universidadeDoSul(List<Universidade> university){
-		super.universidadeDoSul(university);
-		System.out.println("Universidade do sul: ");
-		
-	}
-
 
 }

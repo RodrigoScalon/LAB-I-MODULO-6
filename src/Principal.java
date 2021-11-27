@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -6,14 +7,15 @@ import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
 
+        Scanner input = new Scanner(System.in);
         List<Universidade> university = new ArrayList<>();
         List<Universidade> universityPriv = new ArrayList<>();
 
         boolean cadastro = true;
 
         while (cadastro) {
+
             System.out.println();
             System.out.println("\t*** MENU PRINCIPAL ***");
             System.out.println("-------------------------------------");
@@ -26,12 +28,13 @@ public class Principal {
             System.out.println("-------------------------------------");
             System.out.println("[0] - Encerrar o sistema.");
             System.out.println();
-            System.out.print("Entre com a opções desejada # ");
+            System.out.print("Entre com a opção desejada # ");
             String opcao = input.nextLine();
 
             switch (opcao) {
 
             case "1": {
+
                 System.out.println();
                 System.out.println("*** CADASTRO DE UNIVERSIDADE PÚBLICA ***");
                 System.out.printf("Nome da Universidade: ");
@@ -49,6 +52,7 @@ public class Principal {
                 break;
             }
             case "2": {
+
                 System.out.println();
                 System.out.println("*** CADASTRO DE UNIVERSIDADE PRIVADA ***");
                 System.out.printf("Nome da Universidade: ");
@@ -65,6 +69,7 @@ public class Principal {
                 break;
             }
             case "3": {
+
                 System.out.println();
                 for (Universidade u : university) {
                     System.out.println("UNIVERSIDADE : ");
@@ -75,11 +80,12 @@ public class Principal {
                     System.out.println("UNIVERSIDADE : ");
                     u.getClassName();
                     u.imprimeUniversidades();
-                   
                 }
                 break;
             }
+
             case "4": {
+
                 System.out.println();
                 System.out.println("== MEC - UNIVERSIDADE PRIVADA MAIS CARA ==");
                 Universidade universidade = Collections.max(universityPriv,
@@ -90,16 +96,19 @@ public class Principal {
             }
 
             case "5": {
+
                 System.out.println();
                 System.out.println("== MEC - UNIVERSIDADES PÚBLICAS DO SUL ==");
-               
-                Universidade.universidadeDoSul();
-                
-                
+                System.out.println();
+                for (Universidade u : university) {
+                    u.universidadeDoSul(university);
+                    break;
+                }
                 break;
             }
 
             case "0": {
+
                 cadastro = false;
                 System.out.println("\tPrograma encerrado pelo usuário!");
             }

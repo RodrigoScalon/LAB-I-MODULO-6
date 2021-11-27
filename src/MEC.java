@@ -1,11 +1,13 @@
-public abstract class MEC{ 
+import java.util.List;
 
+public abstract class MEC {
     private String nome;
-	private int quantAlunos, quantProfessores;
+    private int quantAlunos, quantProfessores;
     private Double valorMensalidade;
     private String estado, cidade;
-    
-    public MEC(String nome, int quantAlunos, int quantProfessores, Double valorMensalidade, String estado, String cidade) {
+
+    public MEC(String nome, int quantAlunos, int quantProfessores, Double valorMensalidade, String estado,
+            String cidade) {
         this.nome = nome;
         this.quantAlunos = quantAlunos;
         this.quantProfessores = quantProfessores;
@@ -65,27 +67,17 @@ public abstract class MEC{
         this.cidade = cidade;
     }
 
-    
-    public void imprimeUniversidades(){
-
+    public void imprimeUniversidades() {
         System.out.println("\tNome: " + nome);
-		System.out.println("\tQuantidade de alunos: " + quantAlunos);
-		System.out.println("\tQuantidade de professores: " + quantProfessores);
-    }
-   
-    public void maisCara(){
-
+        System.out.println("\tQuantidade de alunos: " + quantAlunos);
+        System.out.println("\tQuantidade de professores: " + quantProfessores);
     }
 
-    public static void universidadeDoSul (){
-
+    public void maisCara() { //utilizado expressão lambda 
     }
 
-  }
-
-
-
-    
-    
-
-
+    public void universidadeDoSul(List<Universidade> university) {
+        System.out.println("\tNome da Universidade: " + nome);
+        System.out.println("\tEstado: " + estado);
+    }
+}

@@ -1,7 +1,6 @@
 import java.util.List;
 
 public class Universidade extends MEC {
-
 	private String nome;
 	private int quantAlunos, quantProfessores;
 
@@ -36,15 +35,7 @@ public class Universidade extends MEC {
 		quantProfessores = qP;
 	}
 
-	public void imprimeUniversidades() {
-
-		System.out.println("\tNome: " + nome);
-		System.out.println("\tQuantidade de alunos: " + quantAlunos);
-		System.out.println("\tQuantidade de professores: " + quantProfessores);
-
-	}
-
-	public void getClassName() {
+	public void getClassName() { // acesso ao mÃ©todo nome da classe 
 	}
 
 	public Double getValorMensalidade() {
@@ -55,16 +46,22 @@ public class Universidade extends MEC {
 		return getNome();
 	}
 
+	public void imprimeUniversidades() {
+		System.out.println("\tNome: " + nome);
+		System.out.println("\tQuantidade de alunos: " + quantAlunos);
+		System.out.println("\tQuantidade de professores: " + quantProfessores);
+	}
+
 	public void universidadeDoSul(List<Universidade> university) {
 		
-		for (int i = 0; i < university.size(); i++) {
-			Universidade u = university.get(i); 
-			
-			String e1 = new String("RS");
-			String e2 = new String("SC");
-			String e3 = new String("PR");
+		String e1 = new String("RS");
+		String e2 = new String("SC");
+		String e3 = new String("PR");
+
+		for (Universidade u : university) {
 
 			if (e1.equals(u.getEstado())) {
+				
 				System.out.println("Nome da Universidade: " + u.getNome() + ", " + " Estado: " + u.getEstado());
 			} else if (e2.equals(u.getEstado())) {
 				System.out.println("Nome da Universidade: " + u.getNome() + ", " + " Estado: " + u.getEstado());
@@ -72,8 +69,5 @@ public class Universidade extends MEC {
 				System.out.println("Nome da Universidade: " + u.getNome() + ", " + " Estado: " + u.getEstado());
 			}
 		}
-		
 	}
 }
-
-
